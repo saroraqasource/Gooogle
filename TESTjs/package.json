@@ -1,0 +1,37 @@
+{
+  "name": "pastenodejs",
+  "version": "1.0.0",
+  "description": "nodeproject",
+  "main": "inputSheet.js",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "customReportDir",
+    "reportName": "customReportName",
+    "reportTitle": "customReportTitle"
+  },
+  "directories": {
+    "test": "../PasteNodejs/tests"
+  },
+  "dependencies": {
+    "asserts": "^4.0.2",
+    "chromedriver": "^2.35.0",
+    "file-system": "^2.2.2",
+    "geckodriver": "^1.10.0",
+    "good-mocha-html-reporter": "^2.0.1",
+    "karma": "^2.0.0",
+    "mocha": "^4.1.0",
+    "multimatch": "^2.1.0",
+    "npm-run-all": "^4.1.2",
+    "npm-run-series": "^1.0.0",
+    "selenium-webdriver": "^3.6.0"
+  },
+  "devDependencies": {
+    "mocha-tags": "^1.0.1",
+    "mochawesome": "^3.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
