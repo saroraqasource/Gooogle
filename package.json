@@ -22,7 +22,7 @@
     "mocha": "^4.1.0"
   },
   "scripts": {
-    "test": "npm test tests"
+    "test": "mocha tests"
   },
   "author": "",
   "license": "ISC"
