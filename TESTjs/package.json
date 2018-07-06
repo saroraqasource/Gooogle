@@ -1,36 +1,28 @@
 {
-  "name": "pastenodejs",
+  "name": "pwebautomation",
   "version": "1.0.0",
-  "description": "nodeproject",
+  "description": "Created with [Nodeclipse](https://github.com/Nodeclipse/nodeclipse-1)\r  ([Eclipse Marketplace](http://marketplace.eclipse.org/content/nodeclipse), [site](http://www.nodeclipse.org))",
   "main": "inputSheet.js",
-  "reporter": "mochawesome",
-  "reporterOptions": {
-    "reportDir": "customReportDir",
-    "reportName": "customReportName",
-    "reportTitle": "customReportTitle"
-  },
   "directories": {
-    "test": "../PasteNodejs/tests"
+    "test": "tests"
   },
   "dependencies": {
     "asserts": "^4.0.2",
     "chromedriver": "^2.35.0",
+    "executors": "^0.0.6",
     "file-system": "^2.2.2",
     "geckodriver": "^1.10.0",
     "good-mocha-html-reporter": "^2.0.1",
-    "karma": "^2.0.0",
-    "mocha": "^4.1.0",
-    "multimatch": "^2.1.0",
     "npm-run-all": "^4.1.2",
     "npm-run-series": "^1.0.0",
+    "robotjs": "^0.5.1",
     "selenium-webdriver": "^3.6.0"
   },
   "devDependencies": {
-    "mocha-tags": "^1.0.1",
-    "mochawesome": "^3.0.1"
+    "mocha": "^4.1.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "npm test tests"
   },
   "author": "",
   "license": "ISC"
