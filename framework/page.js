@@ -4,6 +4,8 @@
 function Page(webdriver, url) {
   this.driver = webdriver;
   this.url = url;
+  this.until = require('selenium-webdriver').until;
+  this.webdriver = require('selenium-webdriver');
  // this.By = this.webdriver.By;
 };
 
@@ -14,7 +16,7 @@ Page.prototype.open = function() {
 
 Page.prototype.maximum = function() {
 	//this.driver.manage().window().maximize();
-	//this.driver.manage().window().maximize().then(function(){},function(err){});
+	this.driver.manage().window().maximize().then(function(){},function(err){});
 }
 //get browser
 Page.prototype.getBrowser = function(cb) {
@@ -23,6 +25,19 @@ Page.prototype.getBrowser = function(cb) {
     cb(capability);
   });
 }
+
+//get platform name
+Page.prototype.getPlatform = function(cb) {
+  this.driver.getCapabilities().then(function (caps) {
+    var capability = caps.get("platform");
+    if(capability == undefined)
+      {
+      capability = caps.get("platformName");
+      }
+    cb(capability);
+  });
+}
+
 
 Page.prototype.waitFor = function(locator, timeout) {
   var waitTimeout = timeout || 20000;
