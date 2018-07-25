@@ -30,7 +30,7 @@ for(var i=0; i<browsers.length; i++){
 		this.timeout(wait);
 
 		beforeEach(function(){
-			driver = require($PATH +'/framework/driverClass.js').getDriver(browsers[ii]);
+			driver = require($PWD +'/framework/driverClass.js').getDriver(browsers[ii]);
 			page = new Page(driver,url);
 			sign = new Sign(driver);
 			page.maximum();
