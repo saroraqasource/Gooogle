@@ -29,7 +29,7 @@ var buildDriver = function(browser) {
 	    case 'Firefox' :
 
 	    var firefox = require('selenium-webdriver/firefox');
-		var path = require('geckodriver').path;
+		var path = require('geckodriver.exe').path;
 		var service = new firefox.ServiceBuilder(path).build();
 	  	return new webdriver.Builder().
 	    withCapabilities(webdriver.Capabilities.firefox()).
