@@ -15,4 +15,4 @@ branches:
   # blacklist
   except:
     - TravisIntegration
-    - TestRepo 
+  
