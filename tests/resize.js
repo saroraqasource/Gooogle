@@ -3,7 +3,7 @@ Created by QA Source
 PASTE-718: Verify that user is able to resize the asset in Slide Editor View.
  */
 var assert = require('assert');
-var {describe, it, after, before} = require('selenium-webdriver/testing');
+//var {describe, it, after, before} = require('selenium-webdriver/testing');
 var Page = require('../framework/page.js');
 var Sign = require('../pages/signInMochaPage.js');
 
