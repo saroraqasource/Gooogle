@@ -5,7 +5,7 @@ PASTE-718: Verify that user is able to resize the asset in Slide Editor View.
 //'use strict';
 var assert = require('assert');
 var currentPath = process.cwd();
-var {describe, it, after, before} = require('selenium-webdriver/testing');
+//var {describe, it, after, before} = require('selenium-webdriver/testing');
 /*var describe = require('selenium-webdriver/testing');
 var it = require('selenium-webdriver/testing');
 var after = require('selenium-webdriver/testing');
