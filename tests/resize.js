@@ -38,7 +38,7 @@ for(var i=0; i<browsers.length; i++){
 		afterEach(function(){
 			if(driver)
 
-				driver.quit();
+				driver.close();
 		});
 
 		it('Verify that user is able to resize the asset in Slide Editor View PASTE-718#Smoke', function(){	

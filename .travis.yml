@@ -10,10 +10,12 @@ sudo: required
 branches:
   # whitelist
   only:
-    - GitTravisCI
+
+    - Gooogle
     - master
     - /^deploy-.*$/ # regex ok
   # blacklist
   except:
     - TravisIntegration
     - TestRepo 
+
