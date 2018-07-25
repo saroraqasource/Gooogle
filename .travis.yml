@@ -4,3 +4,15 @@ language: node_js
 node_js: 
 - 6.11.3
 sudo: required
+
+# configure which branches to run
+branches:
+  # whitelist
+  only:
+    - Gooogle
+    - master
+    - /^deploy-.*$/ # regex ok
+  # blacklist
+  except:
+    - TravisIntegration
+    - TestRepo 
