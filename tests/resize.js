@@ -4,9 +4,10 @@ PASTE-718: Verify that user is able to resize the asset in Slide Editor View.
  */
 'use strict';
 var assert = require('assert');
+var currentPath = process.cwd();
 //var {describe, it, after, before} = require('selenium-webdriver/testing');
-var Page = require('../framework/page.js');
-var Sign = require('../pages/signInMochaPage.js');
+var Page = require(currentPath+'/framework/page.js');
+var Sign = require(currentPath+'/pages/signInMochaPage.js');
 
 var page,sign;
 
@@ -30,8 +31,7 @@ for(var i=0; i<browsers.length; i++){
 		this.timeout(wait);
 
 		beforeEach(function(){
-			var currentPath = process.cwd();
-			console.log('cc : ' + currentPath);
+		
 			driver = require(currentPath +'/framework/driverClass.js').getDriver(browsers[ii]);
 			page = new Page(driver,url);
 			sign = new Sign(driver);
