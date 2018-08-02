@@ -26,3 +26,4 @@ branches:
     - TravisIntegration
     - TestRepo 
 
+install: /bin/true
