@@ -5,9 +5,17 @@ node_js:
 - "6.1.0"
 sudo: required
 
-addons:
+/*addons:
   firefox: "57.0.4"
-  chrome : "67"
+  chrome : "67"*/
+  
+  addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+  
 before_install:
   - wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
   - mkdir geckodriver
