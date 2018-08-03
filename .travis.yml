@@ -26,5 +26,5 @@ branches:
     - TravisIntegration
     - TestRepo 
 
-install: /bin/true
-- travis_wait 30 mvn install
+install: 
+ travis_wait 30 mvn install
