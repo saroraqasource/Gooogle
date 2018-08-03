@@ -5,7 +5,7 @@ Created By QA Source
 module.exports={
    
 	//crossBrowserTesting : 'Chrome,Firefox',
-	crossBrowserTesting : 'Firefox',
+	crossBrowserTesting : 'Chrome',
     waitForConditionTimeout: '90000',
     team : 'smoke-automate', //staging
        timeout : '50000',
