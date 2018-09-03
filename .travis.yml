@@ -45,8 +45,8 @@ script:
   - >
     echo;
     echo "Running php lint";
-    find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null \;*/
-  - >
+    find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null \;
+  - >*/
     if [[ "$CODECEPTION_TESTS" == "yes" ]]; then
         echo;
         echo "Starting framebuffer"
