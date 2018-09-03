@@ -37,7 +37,7 @@ branches:
     - TravisIntegration
     - TestRepo 
 
-script:
+/*script:
   - >
     echo;
     echo "Running unit tests";
@@ -63,7 +63,7 @@ script:
         sleep 5
         echo "Running codeception tests";
         .Build/bin/codecept run --env stable --env master
-    fi
+    fi*/
 
 install: 
  travis_wait 30 mvn install
