@@ -5,9 +5,9 @@ node_js:
 - "6.1.0"
 sudo: required
 
-/*addons:
+addons:
   firefox: "57.0.4"
-  chrome : "67"*/
+  chrome : "67"
   
   addons:
   apt:
