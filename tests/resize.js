@@ -1,6 +1,6 @@
 /*
 Created by QA Source
-PASTE-718: Verify that user is able to resize the asset in Slide Editor View.
+PASTE-718: Verify that user is able to resize the asset in Slide Editor View. 
  */
 //'use strict';
 var assert = require('assert');
