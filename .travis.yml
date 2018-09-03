@@ -6,7 +6,7 @@ node_js:
 sudo: required
 
 addons:
-  firefox: "57.0.4"
+  firefox: "49.0"
   chrome : "67"
   
   addons:
