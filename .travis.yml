@@ -37,5 +37,33 @@ branches:
     - TravisIntegration
     - TestRepo 
 
+script:
+  - >
+    echo;
+    echo "Running unit tests";
+    .Build/bin/phpunit -c .Build/vendor/typo3/cms/typo3/sysext/core/Build/UnitTests.xml Tests/Unit/
+  - >
+    echo;
+    echo "Running php lint";
+    find . -name \*.php ! -path "./.Build/*" | parallel --gnu php -d display_errors=stderr -l {} > /dev/null \;
+  - >
+    if [[ "$CODECEPTION_TESTS" == "yes" ]]; then
+        echo;
+        echo "Starting framebuffer"
+        sh -e /etc/init.d/xvfb start
+        export DISPLAY=:99.0
+        echo "Extracting firefox and setting PATH variable..."
+        tar -xjf /tmp/firefox-43.0.tar.bz2 --directory /tmp
+        export PATH="/tmp/firefox:$PATH"
+        echo "Using firefox version `firefox --version`"
+        echo "Starting selenium server"
+        wget http://selenium-release.storage.googleapis.com/2.48/selenium-server-standalone-2.48.2.jar
+        java -jar selenium-server-standalone-2.48.2.jar > /dev/null 2>&1 &
+        echo "Waiting for servers to start..."
+        sleep 5
+        echo "Running codeception tests";
+        .Build/bin/codecept run --env stable --env master
+    fi
+
 install: 
  travis_wait 30 mvn install
