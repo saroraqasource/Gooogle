@@ -5,13 +5,13 @@ node_js:
 - "6.1.0"
 sudo: required
 
-addons:
-  firefox: "49.0"
-  chrome : stable
-  
- /* addons:
+/*addons:
   firefox: "49.0"
   chrome : stable*/
+  
+  addons:
+  firefox: "49.0"
+  chrome : stable
   apt:
     sources:
       - google-chrome
