@@ -11,7 +11,12 @@ function Page(webdriver, url) {
 
 Page.prototype.open = function() {
 	console.log('ented open');
-	this.driver.get(this.url);
+	console.log('this.url :'+this.url);
+	this.driver.get(this.url).then(function(val){
+		console.log('getting url');
+	},function(err){
+		console.log('error');
+	})
   return this;
 };
 
