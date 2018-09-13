@@ -29,10 +29,11 @@ var buildDriver = function(browser) {
 	    case 'Firefox' :
 
 	    var firefox = require('selenium-webdriver/firefox');
-		var path = require('geckodriver').path;
-		console.log('path1:' +path);
-			//var currentPath = process.cwd();
-		//	var path = currentPath + '/geckodriver';
+		//var path = require('geckodriver').path;
+		//console.log('path1:' +path);
+			var currentPath = process.cwd();
+			var path = currentPath + '/geckodriver';
+			console.log('path1:' +path);
 		var service = new firefox.ServiceBuilder(path).build();
 	  	return new webdriver.Builder().
 	    withCapabilities(webdriver.Capabilities.firefox()).
