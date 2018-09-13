@@ -10,14 +10,14 @@ function Page(webdriver, url) {
 };
 
 Page.prototype.open = function() {
-	consoole.log('ented open');
+	console.log('ented open');
 	this.driver.get(this.url);
   return this;
 };
 
 Page.prototype.maximum = function() {
 	//this.driver.manage().window().maximize();
-	consoole.log('ented maximize');
+	console.log('ented maximize');
 	this.driver.manage().window().maximize().then(function(){},function(err){});
 }
 //get browser
