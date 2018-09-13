@@ -24,6 +24,7 @@ Page.prototype.maximum = function() {
 Page.prototype.getBrowser = function(cb) {
   this.driver.getCapabilities().then(function (caps) {
     var capability = caps.get("browserName");
+	console.log('capability :' +capability);
     cb(capability);
   });
 }

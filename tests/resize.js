@@ -54,6 +54,7 @@ for(var i=0; i<browsers.length; i++){
 			//get browser on which script is getting executed
 			page.getBrowser(function(val){
 				browser = val;
+				console.log('browser :' +browser);
 
 				//Click Sign In with Slack button
 				sign.signInWithSlack();

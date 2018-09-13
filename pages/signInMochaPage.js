@@ -29,6 +29,7 @@ SignInPage.prototype.constructor = SignInPage;
 SignInPage.prototype.signInWithSlack= function() 
 {
 	this.driver.wait(this.until.elementLocated({ css: signInWithSlackk }),timeoutWait).then(function(val){
+		console.log('click1 ');
 		val.click();
 	},function(err){
 		 throw new Error('sign in with slack button is not present');
@@ -39,6 +40,7 @@ SignInPage.prototype.signInWithSlack= function()
 SignInPage.prototype.team= function(team)
 {
 	this.driver.wait(this.until.elementLocated({ name : domain }),timeoutWait).then(function(val){
+		console.log('click2 ');
 		val.sendKeys(team);
 	},function(err){
 		 throw new Error('Unable to provide team name while signing with Slack');
