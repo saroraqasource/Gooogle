@@ -23,7 +23,7 @@ Page.prototype.open = function() {
 Page.prototype.maximum = function() {
 	//this.driver.manage().window().maximize();
 	console.log('ented maximize');
-	this.driver.manage().window().maximize().then(function(){console.log('max');},function(err){});
+	this.driver.manage().window().maximize().then(function(){console.log('max');},function(err){console.log('err max');});
 }
 //get browser
 Page.prototype.getBrowser = function(cb) {
