@@ -1,5 +1,4 @@
 dist: trusty
-sudo: required
 
 before_script: 
   - chmod 0777 ./node_modules/.bin/mocha
@@ -11,6 +10,12 @@ before_script:
   - "java -jar selenium-server-standalone-2.53.0.jar > /dev/null &"
   - sleep 3
   
+script:
+  - which firefox
+  - firefox --version
+  - which firefox-bin
+  - firefox-bin --version
+  
 language: node_js
 node_js: 
 - "6.1.0"
@@ -18,7 +23,7 @@ sudo: required
 
   
 addons:
-- firefox: "49.0"
+- firefox: "46.0"
   apt:
     sources:
      - google-chrome
