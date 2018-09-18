@@ -15,7 +15,7 @@ script:
   - firefox --version
   - which firefox-bin
   - firefox-bin --version
-  - npm install
+  - mocha tests
   
 language: node_js
 node_js: 
