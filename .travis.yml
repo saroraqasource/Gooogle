@@ -15,6 +15,7 @@ script:
   - firefox --version
   - which firefox-bin
   - firefox-bin --version
+  - npm install
   
 language: node_js
 node_js: 
